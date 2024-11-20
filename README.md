@@ -15,8 +15,12 @@ SENA-Cronogramas es una herramienta web diseñada específicamente para instruct
 
 ## 🛠️ Tecnologías Utilizadas
 
-- TypeScript (88.2%)
-- JavaScript (11.6%)
+- TypeScript 
+- JavaScript
+- MySQl
+- React
+- Git
+- Github
 - Vite
 - ESLint
 - Tailwind CSS
