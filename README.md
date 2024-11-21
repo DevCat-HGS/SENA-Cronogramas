@@ -1,10 +1,10 @@
-# SENA-Cronogramas
+# CTPGA-Manager
 
 Una aplicación web intuitiva para los instructores que facilita la gestión y organización de cronogramas académicos.
 
 ## 🚀 Descripción
 
-SENA-Cronogramas es una herramienta web diseñada específicamente para instructores, permitiendo una gestión eficiente y organizada de los cronogramas académicos. La aplicación está construida con TypeScript y JavaScript, enfocándose en proporcionar una experiencia de usuario intuitiva y funcional.
+CTPGA-Manager es una herramienta web diseñada específicamente para instructores, permitiendo una gestión eficiente y organizada de los cronogramas académicos. La aplicación está construida con TypeScript y JavaScript, enfocándose en proporcionar una experiencia de usuario intuitiva y funcional.
 
 ## ✨ Características
 
