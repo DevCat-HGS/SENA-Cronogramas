@@ -1,76 +1,153 @@
-# CTPGA-Manager
+# SENA Management System
 
-Una aplicación web intuitiva para los instructores que facilita la gestión y organización de cronogramas académicos.
+## 📋 Descripción
+Sistema integral de gestión para instructores SENA, que permite la administración de actividades, horarios y reportes.
 
-## 🚀 Descripción
+## 🏗️ Arquitectura
 
-CTPGA-Manager es una herramienta web diseñada específicamente para instructores, permitiendo una gestión eficiente y organizada de los cronogramas académicos. La aplicación está construida con TypeScript y JavaScript, enfocándose en proporcionar una experiencia de usuario intuitiva y funcional.
+El proyecto está dividido en dos partes principales:
 
-## ✨ Características
-
-- Interfaz de usuario intuitiva y fácil de usar
-- Gestión de cronogramas académicos
-- Organización eficiente de horarios
-- Visualización clara de programación
-
-## 🛠️ Tecnologías Utilizadas
-
-- TypeScript 
-- JavaScript
-- MySQl
-- React
-- Git
-- Github
-- Vite
-- ESLint
+### Frontend
+- Next.js 13 (App Router)
+- TypeScript
 - Tailwind CSS
-- PostCSS
+- React Query
+- Zustand
+- Testing (Jest + Testing Library)
+- PWA Support
 
-## 📋 Prerrequisitos
+### Backend
+- Node.js
+- Express
+- MongoDB
+- JWT Authentication
+- Jest para testing
 
-- Node.js (versión 14 o superior)
-- npm o yarn
+## 🚀 Inicio Rápido
 
-## 🔧 Instalación
+### Requisitos Previos
+- Node.js 18+
+- MongoDB
+- npm/yarn
+- Git
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/DevCat-HGS/SENA-Cronogramas.git
-   ```
+### Instalación
 
-2. Instala las dependencias:
-   ```bash
-   cd SENA-Cronogramas
-   npm install
-   ```
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/your-username/sena-management.git
+cd sena-management
+```
 
-3. Inicia el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
+2. Instalar dependencias del frontend:
+```bash
+cd frontend
+npm install
+```
 
-## 🚀 Uso
+3. Instalar dependencias del backend:
+```bash
+cd ../backend
+npm install
+```
 
-1. Accede a la aplicación a través de tu navegador
-2. Inicia sesión con tus credenciales
-3. Comienza a gestionar tus cronogramas
+4. Configurar variables de entorno:
+```bash
+# En /frontend
+cp .env.example .env.local
 
-## 🤝 Contribuir
+# En /backend
+cp .env.example .env
+```
 
-Las contribuciones son bienvenidas. Para contribuir:
+5. Iniciar los servidores:
+```bash
+# En /backend
+npm run dev
 
-1. Haz fork del proyecto
-2. Crea una rama para tu característica (`git checkout -b feature/AmazingFeature`)
-3. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Haz push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+# En /frontend
+npm run dev
+```
 
-## 📝 Licencia
+## 📁 Estructura del Proyecto
 
-Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para detalles
+```
+sena-management/
+├── frontend/           # Aplicación Next.js
+│   ├── src/           # Código fuente
+│   ├── public/        # Archivos estáticos
+│   └── docs/          # Documentación
+├── backend/           # API Node.js
+│   ├── src/          # Código fuente
+│   ├── tests/        # Tests
+│   └── docs/         # Documentación
+└── docs/             # Documentación general
+```
 
-## 📧 Contacto
+## 🔑 Características Principales
 
-DevCat-HGS - [GitHub Profile](https://github.com/DevCat-HGS)
+- 🔐 Autenticación JWT
+- 📱 Diseño Responsive
+- 🔄 Estado Global
+- 📊 Dashboard en tiempo real
+- 📝 Gestión de actividades
+- 👥 Administración de instructores
+- 📈 Reportes y análisis
+- 🌐 PWA Support
 
-Link del proyecto: [https://github.com/DevCat-HGS/SENA-Cronogramas](https://github.com/DevCat-HGS/SENA-Cronogramas)
+## 📚 Documentación
+
+- [Documentación Frontend](frontend/docs/README.md)
+- [Documentación Backend](backend/docs/README.md)
+- [Guía de Contribución](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
+
+## �� Testing
+
+### Frontend
+```bash
+cd frontend
+npm run test
+```
+
+### Backend
+```bash
+cd backend
+npm run test
+```
+
+## 🚀 Despliegue
+
+### Frontend
+```bash
+cd frontend
+npm run deploy
+```
+
+### Backend
+```bash
+cd backend
+npm run deploy
+```
+
+## 👥 Contribución
+
+1. Fork el proyecto
+2. Crear una rama (`git checkout -b feature/amazing-feature`)
+3. Commit los cambios (`git commit -m 'Add amazing feature'`)
+4. Push a la rama (`git push origin feature/amazing-feature`)
+5. Abrir un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+## 🤝 Soporte
+
+Si tienes alguna pregunta o sugerencia, por favor abre un issue en el repositorio.
+
+## ✨ Agradecimientos
+
+- Equipo de desarrollo SENA
+- Contribuidores
+- Comunidad Open Source
