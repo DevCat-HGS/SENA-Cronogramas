@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Button from './Button';
 
-interface ExportButtonProps<T> {
+interface ExportButtonProps<T extends Record<string, unknown>> {
   data: T[];
   filename?: string;
   format?: 'csv' | 'json';
 }
 
-export function ExportButton<T>({
+export function ExportButton<T extends Record<string, unknown>>({
   data,
   filename = 'export',
   format = 'csv',
@@ -21,7 +21,7 @@ export function ExportButton<T>({
       let mimeType: string;
       let fileExtension: string;
 
-      if (format === 'csv') {
+      if (format === 'csv' && data.length > 0) {
         const headers = Object.keys(data[0]).join(',');
         const rows = data.map((item) =>
           Object.values(item)
@@ -61,4 +61,4 @@ export function ExportButton<T>({
       Exportar {format.toUpperCase()}
     </Button>
   );
-} 
+}

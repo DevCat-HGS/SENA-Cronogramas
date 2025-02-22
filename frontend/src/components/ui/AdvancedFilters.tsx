@@ -50,7 +50,7 @@ export function AdvancedFilters({ filters, onFilterChange }: AdvancedFiltersProp
               {filter.type === 'select' && (
                 <select
                   className="mt-1 block w-full rounded-md border-gray-300"
-                  value={filterValues[filter.id] || ''}
+                  value={(filterValues[filter.id] as string) || ''}
                   onChange={(e) => handleFilterChange(filter.id, e.target.value)}
                 >
                   <option value="">Todos</option>
@@ -65,7 +65,7 @@ export function AdvancedFilters({ filters, onFilterChange }: AdvancedFiltersProp
                 <input
                   type="text"
                   className="mt-1 block w-full rounded-md border-gray-300"
-                  value={filterValues[filter.id] || ''}
+                  value={(filterValues[filter.id] as string) || ''}
                   onChange={(e) => handleFilterChange(filter.id, e.target.value)}
                 />
               )}
@@ -73,7 +73,7 @@ export function AdvancedFilters({ filters, onFilterChange }: AdvancedFiltersProp
                 <input
                   type="date"
                   className="mt-1 block w-full rounded-md border-gray-300"
-                  value={filterValues[filter.id] || ''}
+                  value={(filterValues[filter.id] as string) || ''}
                   onChange={(e) => handleFilterChange(filter.id, e.target.value)}
                 />
               )}

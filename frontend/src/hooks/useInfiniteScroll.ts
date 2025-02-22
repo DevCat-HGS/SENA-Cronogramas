@@ -35,4 +35,4 @@ export function useInfiniteScroll<T>({
     isLoading,
     loadMoreRef,
   };
-} 
+}

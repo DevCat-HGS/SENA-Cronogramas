@@ -5,14 +5,15 @@ import {
   getSortedRowModel,
   getFilteredRowModel,
   flexRender,
+  SortingState, // Añadimos esta importación
 } from '@tanstack/react-table';
 import { useState } from 'react';
 import Button from './Button';
 import { TableProps } from '../../types/table.d';
 
 interface DataTableProps<T> extends TableProps<T> {
-  // isLoading?: boolean;
-  // onRowClick?: (row: T) => void;
+   isLoading?: boolean;
+  onRowClick?: (row: T) => void;
 }
 
 export function DataTable<T>({
@@ -22,7 +23,7 @@ export function DataTable<T>({
   // isLoading,
   // onRowClick,
 }: DataTableProps<T>) {
-  const [sorting, setSorting] = useState([]);
+  const [sorting, setSorting] = useState<SortingState>([]);
   const [globalFilter, setGlobalFilter] = useState('');
 
   const table = useReactTable({
@@ -35,9 +36,19 @@ export function DataTable<T>({
     state: {
       sorting,
       globalFilter,
+      pagination: {
+        pageIndex: pagination?.pageIndex ?? 0,
+        pageSize: pagination?.pageSize ?? 10,
+      },
     },
     onSortingChange: setSorting,
     onGlobalFilterChange: setGlobalFilter,
+    onPaginationChange: (updater) => {
+      if (pagination?.onPageChange) {
+        const newState = typeof updater === 'function' ? updater(table.getState().pagination) : updater;
+        pagination.onPageChange(newState.pageIndex);
+      }
+    },
   });
 
   return (
@@ -103,11 +114,12 @@ export function DataTable<T>({
         </table>
       </div>
 
+      {/* Modificar la parte de la paginación para manejar valores opcionales */}
       <div className="flex items-center justify-between">
         <div className="text-sm text-gray-700">
-          Mostrando {table.getState().pagination.pageIndex * pagination.pageSize + 1} a{' '}
+          Mostrando {(table.getState().pagination.pageIndex * (pagination?.pageSize ?? 10)) + 1} a{' '}
           {Math.min(
-            (table.getState().pagination.pageIndex + 1) * pagination.pageSize,
+            ((table.getState().pagination.pageIndex + 1) * (pagination?.pageSize ?? 10)),
             data.length
           )}{' '}
           de {data.length} resultados
@@ -115,4 +127,4 @@ export function DataTable<T>({
       </div>
     </div>
   );
-} 
+}

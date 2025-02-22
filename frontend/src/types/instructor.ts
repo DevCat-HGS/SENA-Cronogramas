@@ -1,5 +1,9 @@
-export { API } from './api';
+import { API } from './api';
+
+// Re-export the types from the API namespace
 export type Instructor = API.Instructor;
+export type ActividadInstructor = API.ActividadInstructor;
+export type EventoInstructor = API.EventoInstructor;
 
 export interface Instructor {
   _id: string;
@@ -26,4 +30,4 @@ interface EventoInstructor {
   nombre_evento: string;
   fecha_entrega: Date;
   estado: 'pendiente' | 'completado';
-} 
+}

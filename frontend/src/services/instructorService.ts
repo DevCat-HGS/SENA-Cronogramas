@@ -1,3 +1,4 @@
+import { API } from '@/types/api';
 import api from './api';
 
 export const instructorService = {
@@ -15,13 +16,11 @@ export const instructorService = {
     const response = await api.post<API.Response<API.Instructor>>('/instructores', data);
     return response.data;
   },
-
   async update(id: string, data: Partial<API.Instructor>): Promise<API.Response<API.Instructor>> {
     const response = await api.put<API.Response<API.Instructor>>(`/instructores/${id}`, data);
     return response.data;
   },
-
   async delete(id: string): Promise<void> {
     await api.delete(`/instructores/${id}`);
   }
-}; 
+};

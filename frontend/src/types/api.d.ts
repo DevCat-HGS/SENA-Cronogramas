@@ -30,6 +30,21 @@ export namespace API {
   }
 
   // Tipos específicos de tu API
+  declare namespace API {
+    interface Instructor {
+      _id: string;
+      nombre: string;
+      apellido: string;
+      no_documento_identidad: string;
+      email: string;
+      telefono: string;
+      especialidad: string;
+      tipo_contrato: 'planta' | 'contratista';
+      estado: 'activo' | 'inactivo';
+      created_at?: string;
+      updated_at?: string;
+    }
+  }
   interface Instructor {
     _id: string;
     nombre: string;
@@ -60,4 +75,4 @@ export namespace API {
     token: string;
     user: Instructor;
   }
-} 
+}

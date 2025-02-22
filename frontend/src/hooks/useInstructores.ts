@@ -1,6 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { instructorService } from '@/services/instructorService';
 import toast from 'react-hot-toast';
+import { API } from '@/types/api';
 
 export const useInstructores = () => {
   const queryClient = useQueryClient();
@@ -54,4 +55,4 @@ export const useInstructores = () => {
     isUpdating: updateMutation.isLoading,
     isDeleting: deleteMutation.isLoading
   };
-}; 
+};
