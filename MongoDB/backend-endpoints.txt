@@ -1,0 +1,54 @@
+Rutas de Administrador (Admin)
+
+- POST /admin/login - Iniciar sesión como administrador
+- POST /admin/register - Registrar nuevo administrador
+- GET /admin/profile - Obtener perfil del administrador
+- PUT /admin/profile - Actualizar perfil del administrador
+- GET /admin - Obtener todos los administradores
+- GET /admin/:id - Obtener administrador por ID
+- PUT /admin/:id - Actualizar administrador
+- DELETE /admin/:id - Eliminar administrador
+Rutas de Instructor
+
+- POST /instructor/login - Iniciar sesión como instructor
+- GET /instructor/profile - Obtener perfil del instructor
+- PUT /instructor/profile - Actualizar perfil del instructor
+- GET /instructor/activities - Obtener actividades del instructor
+- GET /instructor/events - Obtener eventos del instructor
+- PUT /instructor/events/:eventId/respond - Responder a un evento
+Rutas de Solicitud de Instructor
+
+- POST /instructor-request/submit - Enviar solicitud de instructor
+- GET /instructor-request - Obtener todas las solicitudes
+- GET /instructor-request/:id - Obtener solicitud por ID
+- PUT /instructor-request/:id/approve - Aprobar solicitud
+- PUT /instructor-request/:id/reject - Rechazar solicitud
+Rutas de Eventos
+
+- POST /eventos - Crear nuevo evento
+- GET /eventos - Obtener todos los eventos
+- GET /eventos/:id - Obtener evento por ID
+- PUT /eventos/:id - Actualizar evento
+- DELETE /eventos/:id - Eliminar evento
+- PUT /eventos/:id/participantes - Actualizar participantes
+- PUT /eventos/:id/estado - Actualizar estado del evento
+- GET /eventos/instructor/pendientes - Obtener eventos pendientes
+- PUT /eventos/:id/responder - Responder a invitación
+Rutas de Reportes
+
+- POST /reportes - Crear nuevo reporte
+- GET /reportes/mis-reportes - Obtener reportes propios
+- GET /reportes/:id - Obtener reporte por ID
+- PUT /reportes/:id - Actualizar reporte
+- PUT /reportes/:id/enviar - Enviar reporte
+- GET /reportes - Obtener todos los reportes
+- PUT /reportes/:id/aprobar - Aprobar reporte
+- PUT /reportes/:id/rechazar - Rechazar reporte
+- DELETE /reportes/:id - Eliminar reporte
+Rutas de Actividades de Formación
+
+- POST /actividades - Crear nueva actividad
+- GET /actividades - Obtener todas las actividades
+- GET /actividades/:id - Obtener actividad por ID
+- PUT /actividades/:id - Actualizar actividad
+- DELETE /actividades/:id - Eliminar actividad

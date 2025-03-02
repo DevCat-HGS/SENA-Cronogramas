@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.MuiDrawer-paper {
+  width: 240px;
+}
+
+.page-title {
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.card-dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-dashboard-content {
+  flex-grow: 1;
+}
+
+.data-grid-container {
+  height: 600px;
+  width: 100%;
+}
