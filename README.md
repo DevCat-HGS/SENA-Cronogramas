@@ -65,7 +65,7 @@ The CTPGA Management System is a comprehensive web application designed to manag
 ### Admin Frontend Setup
 1. Navigate to the Admin Frontend directory:
    ```bash
-   cd Frontend/Admin
+   cd Frontend/AdminPanel
    ```
 2. Install dependencies:
    ```bash
@@ -128,7 +128,7 @@ The CTPGA Management System is a comprehensive web application designed to manag
 │   ├── routes/
 │   └── utils/
 ├── Frontend/
-│   ├── Admin/
+│   ├── AdminPanel/
 │   └── InstruPanel/
 └── MongoDB/
 ```
